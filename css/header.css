@@ -1,0 +1,182 @@
+.header{
+	height: 104px;
+	background-image: url("../header.png");
+	background-repeat: repeat-y;
+	line-height: 104px;
+	color: white;
+}
+
+.header-left{
+	float: left;
+	width: 566px;
+	margin: 0;
+	padding-left: 25px;
+	font-family: Arial;
+	font-size: 32px;
+	font-weight: bold;
+
+}
+
+.header-right{
+	float: right;
+	width: 577px;
+	padding-right: 14px;
+	text-align: right;
+}
+
+.top{
+	height: 40px;
+	line-height: 40px;
+	font-size: 10px;
+}
+
+.top p{ display: inline; margin-left: 18px; }
+.top p a, .bottom a{text-decoration: none; color: white;}
+
+.bottom{
+	height: 64px;
+	line-height: 64px;
+	font-size: 10px;
+
+}
+
+.bottom > ul{
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	height: 64px;
+}
+
+.bottom > ul li{
+	height: 64px;
+	display: inline-block;
+	border-right: 2px white;
+	padding-left: 17px;
+}
+
+.bottom > ul li:nth-child(2){
+	width: 200px;
+	padding-right: 17px;
+}
+
+
+.bottom div{display: inline-block; height: 15px; line-height: 15px;}
+
+.bottom img{
+	vertical-align: middle;
+    max-height: 45px;
+}
+
+.bottom p{
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.bottom span{
+	height: 15px;
+}
+
+.imgPhone{
+	margin: 0;
+	padding: 0;
+}
+
+.number-items-chart{
+	font-size: 35px;
+}
+
+.main{ min-height: 1233px; }
+
+.menu{
+	height: 48px;
+	line-height: 48px;
+}
+
+.menu-ul{
+	width: 800px;
+	margin: 0;
+	float: left;
+}
+
+.menu-ul ul{
+	font-weight: bold;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-ul ul li{
+	display: inline;
+	margin-right: 33px;
+}
+
+.menu form{ float: right; }
+
+.menu form input[type="text"]{
+	height: 24px;
+	width: 288px;
+}
+
+.menu form input[type="submit"]{
+	color: white;
+	font-size: 11px;
+	background-color: #e92d2d;
+	border: none;
+	height: 30px;
+	width: 80px;
+}
+
+/* Banner */
+
+.banner{
+	background-color: white;
+	border-top: 1px #cccccc solid;
+	border-left	: 1px #cccccc solid;
+	border-right: 1px #cccccc solid;
+	border-bottom: 3px #cccccc solid;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 15px;
+	color: gray;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.banner ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.banner ul li{
+	display: inline;
+	height: 45px;
+	line-height: 45px;
+	margin-right: 120px;
+}
+
+.banner div{
+	display: inline-block;
+}
+
+.banner-img {
+	display: inline;
+	margin-right: 5px;
+}
+
+.helper{
+	display: inline-block;
+	height: 100%;
+	vertical-align: center;
+}
+
+.banner-img img{
+	vertical-align: middle;
+    max-height: 45px;
+}
+
+.banner-text span{
+	font-weight: normal;
+	color: #BEC2C1;
+}

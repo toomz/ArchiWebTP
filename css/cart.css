@@ -1,0 +1,139 @@
+th, td{
+	margin: 0;
+	padding: 0;
+	border :0;
+}
+
+.banner-item-added{
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	background-color: #89c3ff;
+	font-size: 12px;
+	padding-left: 8px;
+	margin-bottom: 15px;
+}
+
+.products-table{
+	border: none;
+}
+
+.products-table-title{
+	height: 39px;
+	line-height: 39px;
+	background-color: #ee5257;
+	color: white;
+	padding-left: 13px;
+	font-size: 12px;
+}
+
+.products-table-title td{
+	text-align: center;
+}
+
+.products-table-title th:nth-child(1){
+	width: 809px;
+	text-align: left;
+	padding-left: 11px;
+}
+
+.products-table-title th:nth-child(2){ width: 80px;}
+
+.products-table-title th:nth-child(3){width: 100px;}
+.products-table-title th:nth-child(4){width: 72px;}
+.products-table-title th:nth-child(5){width: 119px;}
+
+.products-table-content tr:nth-child(1){
+	padding-top: 15px;
+}
+.products-table-content td div{
+	display: inline-block;
+}
+.products-table-content tr td:nth-child(5), 
+.products-table-content tr td:nth-child(2), 
+.products-table-content tr td:nth-child(4), 
+.products-table-content tr td:nth-child(3){
+    text-align: center;
+}
+
+.product{
+	height: 110px;
+	background-color: white;
+	border: solid 1px #dadada;
+	padding-left: 11px;
+	padding-top: 10px;
+}
+
+.product div{
+	display: inline-block;
+	height: 110px;
+	line-height: 110px;
+}
+
+.product-thumbnail{
+	margin-right: 11px;
+	padding-left: 11px;
+}
+
+.product-thumbnail img{
+	vertical-align: middle;
+    /*max-height: 45px;*/
+}
+
+.product-title{width: 600px;}
+
+.product-edit{width: 60px;}
+
+.product-edit a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.product-price, .product-subtotal{
+	color: red;
+	font-weight: bold;
+}
+
+.product-quantity-input{
+	width: 50px;
+    margin: auto;
+}
+
+.products-btns{
+	margin-top: 20px;
+}
+
+.products-btns button{
+	border: none;
+	height: 34px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.products-btns button:nth-child(1){
+	width: 173px;
+	background-color: #181818;
+}
+
+.products-btns button:nth-child(2){
+	float: right;
+	width: 194px;
+	background-color: #e92d2d;
+}
+.product-quantity {
+    text-align: center;
+/*    margin-left: 25px;*/
+/*    margin-right: 25px;*/
+}
+
+.product-quantity input{
+    marg   
+}
+
+.product-delete-btn {
+    text-align: center;
+}
