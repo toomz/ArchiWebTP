@@ -1,8 +1,8 @@
-function addToCart(poke_id, poke_nom) {
+function addToCart(poke_id, poke_nom, poke_prix) {
 	$.ajax({
-		url : 'add_to_cart.php',
-		type : 'GET',
-//		data : { poke_id : poke_id, poke_nom : poke_nom },
+		url : 'panier.php',
+		type : 'POST',
+		data : { action : "ajout", poke_id : poke_id, poke_nom : poke_nom, poke_prix : poke_prix },
 		dataType : 'html',
 		success : function(code_html, statut) {
 		   // $(code_html).appendTo("#commentaires"); // On passe code_html à jQuery() qui va nous créer l'arbre DOM !

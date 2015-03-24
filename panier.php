@@ -1,10 +1,28 @@
 <?php
 session_start();
-include_once("fonctions-panier.php");
+include_once("cart_functions.php");
 
 $erreur = false;
 
-$action = (isset($_POST['action'])? $_POST['action']:  (isset($_GET['action'])? $_GET['action']:null )) ;
+$action = (isset($_POST['action'])? $_POST['action'] : null )) ;
+if($action != null)
+{
+    $id = (isset($_POST['poke_id']) ? $_POST['poke_id'] : null);
+    $nom = (isset($_POST['poke_nom']) ? $_POST['poke_nom'] : null);
+    $prix = (isset($_POST['poke_prix']) ? $_POST['poke_prix'] : null);
+    
+    switch($action){
+        case "ajout":
+            addPokemon($id, $nom, $prix);
+            break;
+        case default:
+            break;
+    }
+
+}
+?>
+<?
+/*
 if($action !== null)
 {
    if(!in_array($action,array('ajout', 'suppression', 'refresh')))
@@ -112,3 +130,5 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
 </form>
 </body>
 </html>
+*/
+?> 

@@ -1,5 +1,11 @@
 <?php
     require_once('connexion_bdd.php');
+    
+    session_start();
+    if(createCart())
+        $cart = $_SESSION['cart'];   
+    else
+        $cart = null;
 
     
     include_once('header.html');
@@ -23,41 +29,49 @@
 				<th></th>
 			</tr>
 		</thead>
-
+        <?php 
+            if($cart != null)
+            {  
+    
+        ?>
 		<tbody class="products-table-content">
-			<tr>
-				<td>
-					<div class="product-thumbnail">
-						<span class="helper"></span><img src="thumbnail_mini.png">
-					</div>
-					<div class="product-title">
-						Nam at lectus eget mi hendrerit tincidunt
-					</div>
-					<div class="product-edit"> 
-						<a href="#" class="product-edit-link">Edit</a>
-					</div>
-				</td>
-				<td>
-					<div class="product-price">
-						$90.00
-					</div>
-				</td>
-				<td>
-					<div class="product-quantity">
-						<input type="text" class="product-quantity-input" value="1">
-					</div>
-				</td>
-				<td>
-					<div class="product-subtotal">
-						$90.00
-					</div>
-				</td>
-				<td>
-					<div class="product-delete-btn">
-						<button class="product-delete-btn" form="products-form">x</button>
-					</div>
-				</td>
-			</tr>
+            <?php
+                for($i=0; $i<$cart.length; $i++){
+                    echo '<tr>';
+                        echo '<td>';
+                            echo '<div class="product-thumbnail">';
+                                echo '<span class="helper"></span><img src="thumbnail_mini.png">';
+                            echo '</div>';
+                            echo '<div class="product-title">';
+                                Nam at lectus eget mi hendrerit tincidunt
+                            echo '</div>';
+                            <div class="product-edit"> 
+                                <a href="#" class="product-edit-link">Edit</a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-price">
+                                $90.00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-quantity">
+                                <input type="text" class="product-quantity-input" value="1">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-subtotal">
+                                $90.00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-delete-btn">
+                                <button class="product-delete-btn" form="products-form">x</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            ?>
 
 			<tr>
 				<td>

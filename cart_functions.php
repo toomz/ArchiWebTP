@@ -4,14 +4,9 @@
  * Verifie si le panier existe, le créé sinon
  * @return booleen
  */
-//function creationPanier(){
 function createCart(){
    if (!isset($_SESSION['cart'])){
       $_SESSION['cart']=array();
-//      $_SESSION['panier']['libelleProduit'] = array();
-//      $_SESSION['panier']['qteProduit'] = array();
-//      $_SESSION['panier']['prixProduit'] = array();
-//      $_SESSION['panier']['verrou'] = false;
    }
    return true;
 }
@@ -24,28 +19,24 @@ function createCart(){
  * @param float $prixProduit
  * @return void
  */
-function ajouterArticle($libelleProduit,$qteProduit,$prixProduit){
+function addPokemon($poke_id, $poke_name, $poke_price){
 
-   //Si le panier existe
-   if (creationPanier() && !isVerrouille())
+   if (createCart())
    {
+       
+       $pokemon = array();
+       $pokemon['id'] = $poke_id;
+       $pokemon['name'] = $poke_name;
+       $pokemon['price'] = $poke_price;
+       
+       array_push( $_SESSION['cart'], $pokemon);
+       
       //Si le produit existe déjà on ajoute seulement la quantité
-      $positionProduit = array_search($libelleProduit,  $_SESSION['panier']['libelleProduit']);
+//      $positionProduit = array_search($libelleProduit,  $_SESSION['panier']['libelleProduit']);
 
-      if ($positionProduit !== false)
-      {
-         $_SESSION['panier']['qteProduit'][$positionProduit] += $qteProduit ;
-      }
-      else
-      {
-         //Sinon on ajoute le produit
-         array_push( $_SESSION['panier']['libelleProduit'],$libelleProduit);
-         array_push( $_SESSION['panier']['qteProduit'],$qteProduit);
-         array_push( $_SESSION['panier']['prixProduit'],$prixProduit);
-      }
    }
    else
-   echo "Un problème est survenu veuillez contacter l'administrateur du site.";
+       echo "Un problème est survenu veuillez contacter l'administrateur du site.";
 }
 
 
