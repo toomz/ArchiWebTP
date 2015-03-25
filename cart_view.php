@@ -44,7 +44,7 @@
                                 echo '<span class="helper"></span><img src="thumbnail_mini.png">';
                             echo '</div>';
                             echo '<div class="product-title">';
-                                Nam at lectus eget mi hendrerit tincidunt
+                                echo $pokemon['nom'];
                             echo '</div>';
                             echo '<div class="product-edit">'; 
                                 echo '<a href="#" class="product-edit-link">Edit</a>';
@@ -52,7 +52,7 @@
                         echo '</td>';
                         echo '<td>';
                             echo '<div class="product-price">';
-                                echo '$90.00';
+                                echo $pokemon['prix'];
                             echo '</div>';
                         echo '</td>';
                         echo '<td>';
@@ -62,12 +62,12 @@
                         echo '</td>';
                         echo '<td>';
                             echo '<div class="product-subtotal">';
-                                echo '$90.00';
+                                echo $pokemon['prix']*$pokemon['quantite'];
                             echo '</div>';
                         echo '</td>';
                         echo '<td>';
                             echo '<div class="product-delete-btn">';
-                                echo '<button class="product-delete-btn" form="products-form">x</button>';
+                                echo '<button class="product-delete-btn" form="products-form" onClick="deletePokemon();">x</button>';
                             echo '</div>';
                         echo '</td>';
                     echo '</tr>';
