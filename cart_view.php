@@ -37,6 +37,7 @@
 		<tbody class="products-table-content">
             <?php
                 //for($i=0; $i<$cart.length; $i++){
+                foreach($cart as $pokemon){
                     echo '<tr>';
                         echo '<td>';
                             echo '<div class="product-thumbnail">';
