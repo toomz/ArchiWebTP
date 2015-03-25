@@ -36,7 +36,7 @@
         ?>
 		<tbody class="products-table-content">
             <?php
-                for($i=0; $i<$cart.length; $i++){
+                //for($i=0; $i<$cart.length; $i++){
                     echo '<tr>';
                         echo '<td>';
                             echo '<div class="product-thumbnail">';
