@@ -45,31 +45,31 @@
                             echo '<div class="product-title">';
                                 Nam at lectus eget mi hendrerit tincidunt
                             echo '</div>';
-                            <div class="product-edit"> 
-                                <a href="#" class="product-edit-link">Edit</a>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="product-price">
-                                $90.00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="product-quantity">
-                                <input type="text" class="product-quantity-input" value="1">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="product-subtotal">
-                                $90.00
-                            </div>
-                        </td>
-                        <td>
-                            <div class="product-delete-btn">
-                                <button class="product-delete-btn" form="products-form">x</button>
-                            </div>
-                        </td>
-                    </tr>
+                            echo '<div class="product-edit">'; 
+                                echo '<a href="#" class="product-edit-link">Edit</a>';
+                            echo '</div>';
+                        echo '</td>';
+                        echo '<td>';
+                            echo '<div class="product-price">';
+                                echo '$90.00';
+                            echo '</div>';
+                        echo '</td>';
+                        echo '<td>';
+                            echo '<div class="product-quantity">';
+                                echo '<input type="text" class="product-quantity-input" value="1">';
+                            echo '</div>';
+                        echo '</td>';
+                        echo '<td>';
+                            echo '<div class="product-subtotal">';
+                                echo '$90.00';
+                            echo '</div>';
+                        echo '</td>';
+                        echo '<td>';
+                            echo '<div class="product-delete-btn">';
+                                echo '<button class="product-delete-btn" form="products-form">x</button>';
+                            echo '</div>';
+                        echo '</td>';
+                    echo '</tr>';
                 }
             ?>
 
