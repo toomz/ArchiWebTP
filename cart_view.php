@@ -41,7 +41,7 @@
                     echo '<tr>';
                         echo '<td>';
                             echo '<div class="product-thumbnail">';
-                                echo '<span class="helper"></span><img src="thumbnail_mini.png">';
+                                echo '<span class="helper"></span><img src="img/'.$pokemon['img'].'">';
                             echo '</div>';
                             echo '<div class="product-title">';
                                 echo $pokemon['nom'];
@@ -73,7 +73,7 @@
                     echo '</tr>';
                 }
             ?>
-
+<!--
 			<tr>
 				<td>
 					<div class="product-thumbnail">
@@ -107,6 +107,7 @@
 					</div>
 				</td>
 			</tr>
+			-->
 		</tbody>
 	</table>
 
