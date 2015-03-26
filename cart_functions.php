@@ -13,23 +13,22 @@ function createCart(){
 
 
 /**
- * Ajoute un article dans le panier
- * @param string $libelleProduit
- * @param int $qteProduit
- * @param float $prixProduit
- * @return void
+ * Ajoute un pokemon au panier
  */
-function addPokemon($poke_id, $poke_name, $poke_price){
+function addPokemon($poke_id, $poke_name, $poke_price, $poke_img){
 
    if (createCart())
    {
-       
-       $pokemon = array();
-       $pokemon['id'] = $poke_id;
-       $pokemon['name'] = $poke_name;
-       $pokemon['price'] = $poke_price;
-       
-       array_push( $_SESSION['cart'], $pokemon);
+      if( !existsAndIncrement($poke_id) ){
+         $pokemon = array();
+         $pokemon['id'] = $poke_id;
+         $pokemon['name'] = $poke_name;
+         $pokemon['price'] = $poke_price;
+         $pokemon['img'] = $poke_img;
+         $pokemon['quantity'] = 1;
+          
+         array_push( $_SESSION['cart'], $pokemon);
+      }
        
       //Si le produit existe déjà on ajoute seulement la quantité
 //      $positionProduit = array_search($libelleProduit,  $_SESSION['panier']['libelleProduit']);
@@ -37,6 +36,22 @@ function addPokemon($poke_id, $poke_name, $poke_price){
    }
    else
        echo "Un problème est survenu veuillez contacter l'administrateur du site.";
+}
+
+function existsAndIncrement($poke_id){
+   $ret = false;
+   
+   if(createCart()){
+      foreach($_SESSION['cart'] as $pokemon){
+         if($pokemon['id'] == $poke_id){
+            $pokemon['quantity']+=1;
+            $ret = true;
+         }
+      }
+   }
+   
+   return $ret;
+   
 }
 
 
