@@ -87,7 +87,7 @@
 									echo '<div class="item-icons">';
 
 										echo '<div class="item-icons-left">';
-											echo '<button type="button" onclick="addToCart('.$row["poke_id"].',\''.$row["poke_nom"].'\', '.$row["poke_prix"].');">ADD TO CART</button>';
+											echo '<button type="button" onclick="addToCart('.$row["poke_id"].',\''.$row["poke_nom"].'\', '.$row["poke_prix"].', \''.$row['poke_img'].'\');">ADD TO CART</button>';
 
 										echo '</div>';
 
